@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { ArrowRightIcon, SparklesIcon } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '@/data/translations';
@@ -46,7 +46,7 @@ const Portfolio = () => {
         category: t.portfolioItems[index]?.category ?? '',
     }));
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -57,12 +57,12 @@ const Portfolio = () => {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
-            transition: { type: 'spring', stiffness: 300, damping: 30 },
+            transition: { type: 'spring' as const, stiffness: 300, damping: 30 },
         },
     };
 
@@ -241,7 +241,7 @@ const Portfolio = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
                     <motion.button
-                        className="px-8 py-4 rounded-lg bg-[#43B9AA] text-white font-semibold hover:shadow-lg hover:shadow-[#43B9AA]/50 transition-all"
+                        className="px-8 py-4 rounded-lg bg-brand text-white font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >

@@ -41,7 +41,7 @@ const TypingAnimation = ({ phrases }: { phrases: string[] }) => {
     }, [charIndex, isDeleting, phraseIndex, phrases]);
 
     return (
-        <motion.span className="block min-h-[1.2em] text-[#43B9AA]">
+        <motion.span className="block min-h-[1.2em] text-brand">
             {displayText}
             <motion.span
                 animate={{ opacity: [1, 0] }}
@@ -229,7 +229,7 @@ export default function Hero() {
                                 </div>
                                 <motion.button
                                     type="submit"
-                                    className="px-6 py-3 rounded-lg bg-[#43B9AA] text-white font-semibold hover:shadow-lg hover:shadow-[#43B9AA]/50 transition-all whitespace-nowrap"
+                                    className="px-6 py-3 rounded-lg bg-brand text-white font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all whitespace-nowrap"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -246,7 +246,7 @@ export default function Hero() {
                             >
                                 <div>
                                     <motion.div
-                                        className="text-2xl md:text-3xl font-bold text-[#43B9AA]"
+                                        className="text-2xl md:text-3xl font-bold text-brand"
                                         animate={{ y: [0, -5, 0] }}
                                         transition={{ duration: 2, repeat: Infinity }}
                                     >
@@ -256,7 +256,7 @@ export default function Hero() {
                                 </div>
                                 <div>
                                     <motion.div
-                                        className="text-2xl md:text-3xl font-bold text-[#43B9AA]"
+                                        className="text-2xl md:text-3xl font-bold text-brand"
                                         animate={{ y: [0, -5, 0] }}
                                         transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
                                     >
@@ -266,7 +266,7 @@ export default function Hero() {
                                 </div>
                                 <div>
                                     <motion.div
-                                        className="text-2xl md:text-3xl font-bold text-[#43B9AA]"
+                                        className="text-2xl md:text-3xl font-bold text-brand"
                                         animate={{ y: [0, -5, 0] }}
                                         transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
                                     >
