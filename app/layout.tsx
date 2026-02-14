@@ -13,40 +13,40 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: {
-        default: "Pixel.io – Digital Agency Template | PrebuiltUI",
-        template: "%s | Pixel.io",
+        default: "Vector-Vision – Digital Agency ",
+        template: "%s | Vector-Vision",
     },
-    description:
-        "Pixel.io is a modern digital agency template by PrebuiltUI, built for startups and growing businesses. Includes discovery, UI/UX design, development, pricing plans, FAQs, and conversion-focused sections.",
-    keywords: [
-        "Pixel.io",
-        "PrebuiltUI",
-        "digital agency template",
-        "Next.js agency website",
-        "UI UX agency",
-        "startup website template",
-        "web development services",
-        "design and development agency",
-    ],
-    authors: [{ name: "PrebuiltUI" }],
-    creator: "PrebuiltUI",
-    publisher: "PrebuiltUI",
+    // description:
+    //     "Pixel.io is a modern digital agency template by PrebuiltUI, built for startups and growing businesses. Includes discovery, UI/UX design, development, pricing plans, FAQs, and conversion-focused sections.",
+    // keywords: [
+    //     "Pixel.io",
+    //     "PrebuiltUI",
+    //     "digital agency template",
+    //     "Next.js agency website",
+    //     "UI UX agency",
+    //     "startup website template",
+    //     "web development services",
+    //     "design and development agency",
+    // ],
+    // authors: [{ name: "PrebuiltUI" }],
+    // creator: "PrebuiltUI",
+    // publisher: "PrebuiltUI",
 
-    openGraph: {
-        title: "Pixel.io – Digital Agency Template by PrebuiltUI",
-        description:
-            "Launch faster with Pixel.io, a modern digital agency template featuring strategy, design, development, pricing plans, and FAQs.",
-        siteName: "PrebuiltUI",
-        type: "website",
-    },
+    // openGraph: {
+    //     title: "Pixel.io – Digital Agency Template by PrebuiltUI",
+    //     description:
+    //         "Launch faster with Pixel.io, a modern digital agency template featuring strategy, design, development, pricing plans, and FAQs.",
+    //     siteName: "PrebuiltUI",
+    //     type: "website",
+    // },
 
-    twitter: {
-        card: "summary_large_image",
-        title: "Pixel.io – Digital Agency Template",
-        description:
-            "A conversion-focused digital agency template built with Next.js. Perfect for startups, teams, and scalable brands.",
-        creator: "@prebuiltui",
-    },
+    // twitter: {
+    //     card: "summary_large_image",
+    //     title: "Pixel.io – Digital Agency Template",
+    //     description:
+    //         "A conversion-focused digital agency template built with Next.js. Perfect for startups, teams, and scalable brands.",
+    //     creator: "@prebuiltui",
+    // },
 
     robots: {
         index: true,
