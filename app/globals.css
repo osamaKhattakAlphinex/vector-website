@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Outfit", sans-serif;
+}
+
+@layer base {
+    body {
+        @apply bg-gray-950 text-white antialiased;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    html.rtl {
+        direction: rtl;
+    }
+
+    html.ltr {
+        direction: ltr;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: inline-flex;
+    animation: marquee 40s linear infinite;
+}
+
+.animate-marquee-rtl {
+    display: inline-flex;
+    animation: marquee 40s linear infinite reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+@theme {
+    --color-primary: #8b5cf6;
+    --color-primary-hover: #7c3aed;
+    --color-secondary: #ec4899;
+    --color-dark-bg: #0f172a;
+    --color-dark-card: #1e293b;
+    --color-brand: #43B9AA;
+    --color-brand-dark: #3AA498;
+    --color-brand-light: #5fcebe;
+}
+
+@layer utilities {
+    .glass-panel {
+        @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+    }
+}
