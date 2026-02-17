@@ -209,7 +209,7 @@ export default function Hero() {
                             </motion.p>
 
                             {/* Lead Form */}
-                            <motion.form
+                            {/* <motion.form
                                 onSubmit={handleSubmit}
                                 className={`flex flex-col sm:flex-row gap-3 max-w-md mx-auto justify-center ${isRTL ? 'flex-row-reverse' : ''}`}
                                 initial={{ opacity: 0, y: 20 }}
@@ -235,11 +235,19 @@ export default function Hero() {
                                 >
                                     {isSubmitted ? 'Sent!' : t.getStarted}
                                 </motion.button>
-                            </motion.form>
+                            </motion.form> */}
+                            <motion.a
+                                href='#CTA'
+                                className="px-6 py-3 rounded-lg bg-brand text-white font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all whitespace-nowrap my-6"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                Get Started
+                            </motion.a>
 
                             {/* Stats */}
                             <motion.div
-                                className={`flex flex-wrap gap-8 pt-4 justify-center ${isRTL ? 'flex-row-reverse' : ''}`}
+                                className={`flex flex-wrap gap-8 mt-6 pt-4 justify-center ${isRTL ? 'flex-row-reverse' : ''}`}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.6 }}
