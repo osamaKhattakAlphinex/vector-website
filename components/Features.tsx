@@ -57,6 +57,89 @@ export default function Features() {
                 }}
             />
 
+            {/* Geometric shapes */}
+            <motion.div
+                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-purple-400/20 rounded-lg"
+                animate={{
+                    y: [0, -80, 0],
+                    rotate: [0, 180, 360],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            <motion.div
+                className="absolute top-1/2 left-1/3 w-12 h-12 border-2 border-indigo-400/20"
+                animate={{
+                    y: [0, -100, 0],
+                    rotate: [0, -180, -360],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 1,
+                }}
+            />
+
+            <motion.div
+                className="absolute bottom-1/3 right-1/3 w-20 h-20 border-2 border-cyan-400/20 rounded-full"
+                animate={{
+                    y: [0, -90, 0],
+                    scale: [1, 1.2, 1],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 0.5,
+                }}
+            />
+
+            {/* Star shapes */}
+            <motion.div
+                className="absolute top-1/3 left-1/4 text-purple-400/20"
+                animate={{
+                    y: [0, -60, 0],
+                    rotate: [0, 360],
+                    scale: [1, 1.3, 1],
+                }}
+                transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+            </motion.div>
+
+            <motion.div
+                className="absolute bottom-1/4 right-1/4 text-indigo-400/20"
+                animate={{
+                    y: [0, -70, 0],
+                    rotate: [360, 0],
+                    scale: [1, 1.4, 1],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 2,
+                }}
+            >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+            </motion.div>
+
             <div className="max-w-6xl mx-auto px-4 relative z-10">
 
                 <Title

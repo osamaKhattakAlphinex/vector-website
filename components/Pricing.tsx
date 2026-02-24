@@ -40,6 +40,70 @@ export default function Pricing() {
                 }}
             />
 
+            {/* Geometric shapes */}
+            <motion.div
+                className="absolute top-1/3 left-1/4 w-14 h-14 border-2 border-indigo-400/20 rounded-lg"
+                animate={{
+                    y: [0, -70, 0],
+                    rotate: [0, 180, 360],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            <motion.div
+                className="absolute bottom-1/3 right-1/4 w-16 h-16 border-2 border-cyan-400/20"
+                animate={{
+                    y: [0, -80, 0],
+                    rotate: [0, -180, -360],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 1.5,
+                }}
+            />
+
+            {/* Plus signs */}
+            <motion.div
+                className="absolute top-1/4 right-1/3 text-indigo-400/20 text-3xl font-light"
+                animate={{
+                    y: [0, -60, 0],
+                    rotate: [0, 90, 0],
+                    opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            >
+                +
+            </motion.div>
+
+            <motion.div
+                className="absolute bottom-1/4 left-1/3 text-cyan-400/20 text-4xl font-light"
+                animate={{
+                    y: [0, -70, 0],
+                    rotate: [0, -90, 0],
+                    opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 2,
+                }}
+            >
+                +
+            </motion.div>
+
             <div className="max-w-6xl mx-auto px-4 relative z-10">
 
                 <Title

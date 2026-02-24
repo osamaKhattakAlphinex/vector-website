@@ -11,8 +11,99 @@ export default function Faq() {
     const t = translations[language];
 
     return (
-        <section id="faq" className="py-20 2xl:py-32">
-            <div className="max-w-3xl mx-auto px-4">
+        <section id="faq" className="relative py-20 2xl:py-32 overflow-hidden">
+            {/* Animated Background Orbs */}
+            <motion.div
+                className="absolute top-20 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"
+                animate={{
+                    y: [0, 60, 0],
+                    x: [0, 40, 0],
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            <motion.div
+                className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"
+                animate={{
+                    y: [0, -60, 0],
+                    x: [0, -40, 0],
+                }}
+                transition={{
+                    duration: 11,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            {/* Geometric shapes */}
+            <motion.div
+                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-purple-400/20"
+                animate={{
+                    y: [0, -70, 0],
+                    rotate: [0, -180, -360],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            <motion.div
+                className="absolute bottom-1/4 left-1/3 w-14 h-14 border-2 border-cyan-400/20 rounded-full"
+                animate={{
+                    y: [0, -80, 0],
+                    scale: [1, 1.4, 1],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 1.5,
+                }}
+            />
+
+            {/* Question marks */}
+            <motion.div
+                className="absolute top-1/3 left-1/4 text-purple-400/20 text-4xl font-light"
+                animate={{
+                    y: [0, -60, 0],
+                    rotate: [0, 15, -15, 0],
+                    opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            >
+                ?
+            </motion.div>
+
+            <motion.div
+                className="absolute bottom-1/3 right-1/4 text-cyan-400/20 text-3xl font-light"
+                animate={{
+                    y: [0, -65, 0],
+                    rotate: [0, -15, 15, 0],
+                    opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 2,
+                }}
+            >
+                ?
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto px-4 relative z-10">
 
                 <Title
                     title={t.faqTitle}

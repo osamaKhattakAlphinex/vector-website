@@ -104,8 +104,82 @@ export default function CTA() {
     };
 
     return (
-        <section id="CTA" className="py-20 2xl:pb-32 px-4">
-            <div className="container mx-auto max-w-4xl">
+        <section id="CTA" className="relative py-20 2xl:pb-32 px-4 overflow-hidden">
+            {/* Animated Background Orbs */}
+            <motion.div
+                className="absolute top-10 left-10 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"
+                animate={{
+                    y: [0, 50, 0],
+                    x: [0, 30, 0],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            <motion.div
+                className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+                animate={{
+                    y: [0, -50, 0],
+                    x: [0, -30, 0],
+                }}
+                transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            {/* Geometric shapes */}
+            <motion.div
+                className="absolute top-1/4 left-1/4 w-12 h-12 border-2 border-violet-400/20 rounded-full"
+                animate={{
+                    y: [0, -65, 0],
+                    scale: [1, 1.3, 1],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            />
+
+            <motion.div
+                className="absolute bottom-1/4 right-1/3 w-14 h-14 border-2 border-indigo-400/20 rounded-lg"
+                animate={{
+                    y: [0, -75, 0],
+                    rotate: [0, 180, 360],
+                    opacity: [0.2, 0.5, 0.2],
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 1,
+                }}
+            />
+
+            {/* X marks */}
+            <motion.div
+                className="absolute top-1/3 right-1/4 text-violet-400/20 text-3xl font-light"
+                animate={{
+                    y: [0, -55, 0],
+                    rotate: [0, 45, 0],
+                    opacity: [0.2, 0.6, 0.2],
+                }}
+                transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                }}
+            >
+                ×
+            </motion.div>
+
+            <div className="container mx-auto max-w-4xl relative z-10">
                 <div className={`rounded-3xl bg-linear-to-b from-violet-900/20 to-violet-900/5 border border-violet-500/20 p-12 md:p-16 relative overflow-hidden ${isRTL ? 'rtl' : 'ltr'}`}>
                     <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20" />
                     <div className="relative z-10">

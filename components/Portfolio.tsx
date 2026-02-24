@@ -1,10 +1,10 @@
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRightIcon, SparklesIcon } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '@/data/translations';
 
 const Portfolio = () => {
-    const { language } = useLanguage();
+    const { language, isRTL } = useLanguage();
     const t = translations[language];
 
     const staticPortfolioData = [
@@ -45,26 +45,6 @@ const Portfolio = () => {
         title: t.portfolioItems[index]?.title ?? '',
         category: t.portfolioItems[index]?.category ?? '',
     }));
-
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2,
-            },
-        },
-    };
-
-    const itemVariants: Variants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: { type: 'spring' as const, stiffness: 300, damping: 30 },
-        },
-    };
 
     return (
         <section id="portfolio" className="relative py-20 2xl:py-32 px-4 overflow-hidden">
@@ -152,88 +132,175 @@ const Portfolio = () => {
                     </p>
                 </motion.div>
 
-                {/* Portfolio Grid */}
+                {/* Portfolio Marquee Slider - Two Rows */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
+                    className="space-y-6"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
                 >
-                    {portfolioItems.map((item) => (
-                        <motion.div
-                            key={item.id}
-                            variants={itemVariants}
-                            className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-all duration-300"
-                            whileHover={{ y: -5 }}
-                        >
-                            {/* Glow effect */}
-                            <motion.div
-                                className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-cyan-500/0 group-hover:from-indigo-500/10 group-hover:to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                            />
-
-                            {/* Image Container */}
-                            <div className="relative h-64 overflow-hidden">
-                                <motion.img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="w-full h-full object-cover"
-                                    whileHover={{ scale: 1.1 }}
-                                    transition={{ duration: 0.4 }}
-                                />
-                                {/* Overlay */}
+                    {/* Row 1 - Left to Right */}
+                    <div className="w-full overflow-hidden" style={{ direction: 'ltr' }}>
+                        <div className={`flex gap-6 items-start ${isRTL ? 'animate-marquee-rtl' : 'animate-marquee'} whitespace-nowrap`}>
+                            {portfolioItems.slice(0, 3).concat(portfolioItems.slice(0, 3)).map((item, index) => (
                                 <motion.div
-                                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-                                    initial={{ opacity: 0 }}
-                                    whileHover={{ opacity: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                />
-                            </div>
-
-                            {/* Content */}
-                            <div className="relative z-10 p-6">
-                                <motion.span
-                                    className="inline-block px-3 py-1 rounded-full border border-[#43B9AA]  text-white text-xs font-semibold mb-3"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
+                                    key={`row1-${item.id}-${index}`}
+                                    className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 inline-block w-[350px] shrink-0"
+                                    whileHover={{ y: -5 }}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.2 }}
+                                    transition={{ delay: index * 0.05 }}
                                 >
-                                    {item.category}
-                                </motion.span>
+                                    {/* Glow effect */}
+                                    <motion.div
+                                        className="absolute inset-0 bg-linear-to-br from-indigo-500/0 to-cyan-500/0 group-hover:from-indigo-500/10 group-hover:to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    />
 
-                                <h3 className="text-xl text-[#43B9AA] font-bold mb-2  transition-colors">
-                                    {item.title}
-                                </h3>
+                                    {/* Image Container */}
+                                    <div className="relative  overflow-hidden">
+                                        <motion.img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-full h-[200px] object-cover"
+                                            whileHover={{ scale: 1.1 }}
+                                            transition={{ duration: 0.4 }}
+                                        />
+                                        {/* Overlay */}
+                                        <motion.div
+                                            className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent"
+                                            initial={{ opacity: 0 }}
+                                            whileHover={{ opacity: 1 }}
+                                            transition={{ duration: 0.3 }}
+                                        />
+                                    </div>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {item.tags.map((tag, idx) => (
-                                        <span
-                                            key={idx}
-                                            className="text-xs text-gray-100/90 bg-[#43B9AA] px-2 py-1 rounded"
+                                    {/* Content */}
+                                    <div className="relative z-10 p-6 whitespace-normal">
+                                        <motion.span
+                                            className="inline-block px-3 py-1 rounded-full border border-[#43B9AA] text-white text-xs font-semibold mb-3"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.2 }}
                                         >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                                            {item.category}
+                                        </motion.span>
 
-                                {/* View Project Button */}
-                                <motion.button
-                                    className="flex items-center gap-2 text-white  text-sm font-semibold"
-                                    whileHover={{ x: 5 }}
-                                    whileTap={{ scale: 0.95 }}
+                                        <h3 className="text-xl text-[#43B9AA] font-bold mb-2 transition-colors">
+                                            {item.title}
+                                        </h3>
+
+                                        {/* Tags */}
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            {item.tags.map((tag, idx) => (
+                                                <span
+                                                    key={idx}
+                                                    className="text-xs text-gray-100/90 bg-[#43B9AA] px-2 py-1 rounded"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* View Project Button */}
+                                        <motion.button
+                                            className="flex items-center gap-2 text-white text-sm font-semibold"
+                                            whileHover={{ x: 5 }}
+                                            whileTap={{ scale: 0.95 }}
+                                        >
+                                            {t.viewProject}
+                                            <ArrowRightIcon className="w-4 h-4" />
+                                        </motion.button>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Row 2 - Right to Left (Opposite Direction) */}
+                    <div className="w-full overflow-hidden" style={{ direction: 'ltr' }}>
+                        <div className={`flex gap-6 items-start ${isRTL ? 'animate-marquee' : 'animate-marquee-rtl'} whitespace-nowrap`}>
+                            {portfolioItems.slice(3, 6).concat(portfolioItems.slice(3, 6)).map((item, index) => (
+                                <motion.div
+                                    key={`row2-${item.id}-${index}`}
+                                    className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 inline-block w-[350px] shrink-0"
+                                    whileHover={{ y: -5 }}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.05 }}
                                 >
-                                    {t.viewProject}
-                                    <ArrowRightIcon className="w-4 h-4" />
-                                </motion.button>
-                            </div>
-                        </motion.div>
-                    ))}
+                                    {/* Glow effect */}
+                                    <motion.div
+                                        className="absolute inset-0 bg-linear-to-br from-indigo-500/0 to-cyan-500/0 group-hover:from-indigo-500/10 group-hover:to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    />
+
+                                    {/* Image Container */}
+                                    <div className="relative  overflow-hidden">
+                                        <motion.img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-full h-[200px] object-cover"
+                                            whileHover={{ scale: 1.1 }}
+                                            transition={{ duration: 0.4 }}
+                                        />
+                                        {/* Overlay */}
+                                        <motion.div
+                                            className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent"
+                                            initial={{ opacity: 0 }}
+                                            whileHover={{ opacity: 1 }}
+                                            transition={{ duration: 0.3 }}
+                                        />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="relative z-10 p-6 whitespace-normal">
+                                        <motion.span
+                                            className="inline-block px-3 py-1 rounded-full border border-[#43B9AA] text-white text-xs font-semibold mb-3"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.2 }}
+                                        >
+                                            {item.category}
+                                        </motion.span>
+
+                                        <h3 className="text-xl text-[#43B9AA] font-bold mb-2 transition-colors">
+                                            {item.title}
+                                        </h3>
+
+                                        {/* Tags */}
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            {item.tags.map((tag, idx) => (
+                                                <span
+                                                    key={idx}
+                                                    className="text-xs text-gray-100/90 bg-[#43B9AA] px-2 py-1 rounded"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* View Project Button */}
+                                        <motion.button
+                                            className="flex items-center gap-2 text-white text-sm font-semibold"
+                                            whileHover={{ x: 5 }}
+                                            whileTap={{ scale: 0.95 }}
+                                        >
+                                            {t.viewProject}
+                                            <ArrowRightIcon className="w-4 h-4" />
+                                        </motion.button>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </motion.div>
 
                 {/* CTA Button */}
-                <motion.div
+                {/* <motion.div
                     className="text-center mt-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +314,10 @@ const Portfolio = () => {
                     >
                         {t.viewAllProjects}
                     </motion.button>
-                </motion.div>
+                </motion.div> */}
+
+                {/* Marquee Slider - Two Rows Moving in Opposite Directions */}
+
             </div>
         </section>
     );
