@@ -9,6 +9,7 @@ const TypingAnimation = ({ phrases }: { phrases: string[] }) => {
     const [phraseIndex, setPhraseIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
     useEffect(() => {
         if (phrases.length === 0) return;
@@ -85,12 +86,12 @@ export default function Hero() {
         // { name: 'Vector Graphics', url: '/assets/clients/vector-graphics.png' },
     ];
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitted(true);
-        setEmail('');
-        setTimeout(() => setIsSubmitted(false), 3000);
-    };
+    // const handleSubmit = (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     setIsSubmitted(true);
+    //     setEmail('');
+    //     setTimeout(() => setIsSubmitted(false), 3000);
+    // };
 
     return (
         <>
