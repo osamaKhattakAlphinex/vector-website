@@ -59,7 +59,7 @@ export default function Features() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-brand/20 rounded-lg"
+                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-[#F7A95D] rounded-lg"
                 animate={{
                     y: [0, -80, 0],
                     rotate: [0, 180, 360],
@@ -73,7 +73,7 @@ export default function Features() {
             />
 
             <motion.div
-                className="absolute top-1/2 left-1/3 w-12 h-12 border-2 border-secondary/20"
+                className="absolute top-1/2 left-1/3 w-12 h-12 border-2 border-[#F7A95D]"
                 animate={{
                     y: [0, -100, 0],
                     rotate: [0, -180, -360],
@@ -88,7 +88,7 @@ export default function Features() {
             />
 
             <motion.div
-                className="absolute bottom-1/3 right-1/3 w-20 h-20 border-2 border-brand/20 rounded-full"
+                className="absolute bottom-1/3 right-1/3 w-20 h-20 border-2 border-[#F7A95D] rounded-full"
                 animate={{
                     y: [0, -90, 0],
                     scale: [1, 1.2, 1],
@@ -104,7 +104,7 @@ export default function Features() {
 
             {/* Star shapes */}
             <motion.div
-                className="absolute top-1/3 left-1/4 text-brand/20"
+                className="absolute top-1/3 left-1/4 text-[#F7A95D]"
                 animate={{
                     y: [0, -60, 0],
                     rotate: [0, 360],

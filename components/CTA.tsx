@@ -134,7 +134,7 @@ export default function CTA() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/4 left-1/4 w-12 h-12 border-2 border-brand/20 rounded-full"
+                className="absolute top-1/4 left-1/4 w-12 h-12 border-2 border-[#F7A95D] rounded-full"
                 animate={{
                     y: [0, -65, 0],
                     scale: [1, 1.3, 1],
@@ -148,7 +148,7 @@ export default function CTA() {
             />
 
             <motion.div
-                className="absolute bottom-1/4 right-1/3 w-14 h-14 border-2 border-secondary/20 rounded-lg"
+                className="absolute bottom-1/4 right-1/3 w-14 h-14 border-2 border-[#F7A95D] rounded-lg"
                 animate={{
                     y: [0, -75, 0],
                     rotate: [0, 180, 360],
@@ -164,7 +164,7 @@ export default function CTA() {
 
             {/* X marks */}
             <motion.div
-                className="absolute top-1/3 right-1/4 text-brand/20 text-3xl font-light"
+                className="absolute top-1/3 right-1/4 text-[#F7A95D] text-3xl font-light"
                 animate={{
                     y: [0, -55, 0],
                     rotate: [0, 45, 0],

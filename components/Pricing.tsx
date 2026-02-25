@@ -42,7 +42,7 @@ export default function Pricing() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/3 left-1/4 w-14 h-14 border-2 border-brand/20 rounded-lg"
+                className="absolute top-1/3 left-1/4 w-14 h-14 border-2 border-[#F7A95D] rounded-lg"
                 animate={{
                     y: [0, -70, 0],
                     rotate: [0, 180, 360],

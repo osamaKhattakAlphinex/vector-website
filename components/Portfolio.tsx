@@ -77,7 +77,7 @@ const Portfolio = () => {
 
             {/* Floating Sparkles */}
             <motion.div
-                className="absolute top-20 right-20 text-brand"
+                className="absolute top-20 right-20 text-[#9FFC66]"
                 animate={{
                     y: [0, -20, 0],
                     rotate: [0, 360],

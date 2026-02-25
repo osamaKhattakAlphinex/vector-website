@@ -41,7 +41,7 @@ export default function Faq() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-brand/20"
+                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-[#F7A95D]"
                 animate={{
                     y: [0, -70, 0],
                     rotate: [0, -180, -360],
@@ -55,7 +55,7 @@ export default function Faq() {
             />
 
             <motion.div
-                className="absolute bottom-1/4 left-1/3 w-14 h-14 border-2 border-secondary/20 rounded-full"
+                className="absolute bottom-1/4 left-1/3 w-14 h-14 border-2 border-[#F7A95D] rounded-full"
                 animate={{
                     y: [0, -80, 0],
                     scale: [1, 1.4, 1],
@@ -71,7 +71,7 @@ export default function Faq() {
 
             {/* Question marks */}
             <motion.div
-                className="absolute top-1/3 left-1/4 text-brand/20 text-4xl font-light"
+                className="absolute top-1/3 left-1/4 text-[#F7A95D] text-4xl font-light"
                 animate={{
                     y: [0, -60, 0],
                     rotate: [0, 15, -15, 0],
@@ -87,7 +87,7 @@ export default function Faq() {
             </motion.div>
 
             <motion.div
-                className="absolute bottom-1/3 right-1/4 text-secondary/20 text-3xl font-light"
+                className="absolute bottom-1/3 right-1/4 text-[#F7A95D] text-3xl font-light"
                 animate={{
                     y: [0, -65, 0],
                     rotate: [0, -15, 15, 0],
