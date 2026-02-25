@@ -107,7 +107,7 @@ export default function CTA() {
         <section id="CTA" className="relative py-20 2xl:pb-32 px-4 overflow-hidden">
             {/* Animated Background Orbs */}
             <motion.div
-                className="absolute top-10 left-10 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"
+                className="absolute top-10 left-10 w-96 h-96 bg-brand/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, 50, 0],
                     x: [0, 30, 0],
@@ -120,7 +120,7 @@ export default function CTA() {
             />
 
             <motion.div
-                className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+                className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, -50, 0],
                     x: [0, -30, 0],
@@ -134,7 +134,7 @@ export default function CTA() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/4 left-1/4 w-12 h-12 border-2 border-violet-400/20 rounded-full"
+                className="absolute top-1/4 left-1/4 w-12 h-12 border-2 border-brand/20 rounded-full"
                 animate={{
                     y: [0, -65, 0],
                     scale: [1, 1.3, 1],
@@ -148,7 +148,7 @@ export default function CTA() {
             />
 
             <motion.div
-                className="absolute bottom-1/4 right-1/3 w-14 h-14 border-2 border-indigo-400/20 rounded-lg"
+                className="absolute bottom-1/4 right-1/3 w-14 h-14 border-2 border-secondary/20 rounded-lg"
                 animate={{
                     y: [0, -75, 0],
                     rotate: [0, 180, 360],
@@ -164,7 +164,7 @@ export default function CTA() {
 
             {/* X marks */}
             <motion.div
-                className="absolute top-1/3 right-1/4 text-violet-400/20 text-3xl font-light"
+                className="absolute top-1/3 right-1/4 text-brand/20 text-3xl font-light"
                 animate={{
                     y: [0, -55, 0],
                     rotate: [0, 45, 0],
@@ -180,7 +180,7 @@ export default function CTA() {
             </motion.div>
 
             <div className="container mx-auto max-w-4xl relative z-10">
-                <div className={`rounded-3xl bg-linear-to-b from-violet-900/20 to-violet-900/5 border border-violet-500/20 p-12 md:p-16 relative overflow-hidden ${isRTL ? 'rtl' : 'ltr'}`}>
+                <div className={`rounded-3xl bg-linear-to-b from-brand/5 to-dark-card border border-brand/20 p-12 md:p-16 relative overflow-hidden ${isRTL ? 'rtl' : 'ltr'}`}>
                     <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20" />
                     <div className="relative z-10">
                         <motion.h2 className="text-2xl sm:text-4xl font-semibold mb-6 text-center"
@@ -308,7 +308,7 @@ export default function CTA() {
                             <motion.button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full px-8 py-3 rounded-lg bg-brand text-white font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full px-8 py-3 rounded-lg bg-brand text-black font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                                 whileHover={{ scale: isLoading ? 1 : 1.02 }}
                                 whileTap={{ scale: isLoading ? 1 : 0.98 }}
                             >

@@ -6,7 +6,9 @@
 
 @layer base {
     body {
-        @apply bg-gray-950 text-white antialiased;
+        @apply antialiased;
+        background-color: #111411;
+        color: #cdcdcd;
     }
 
     button {
@@ -61,14 +63,14 @@
 }
 
 @theme {
-    --color-primary: #8b5cf6;
-    --color-primary-hover: #7c3aed;
-    --color-secondary: #ec4899;
-    --color-dark-bg: #0f172a;
-    --color-dark-card: #1e293b;
-    --color-brand: #43b9aa;
-    --color-brand-dark: #3aa498;
-    --color-brand-light: #5fcebe;
+    --color-primary: #efff43;
+    --color-primary-hover: #d9e83d;
+    --color-secondary: #cdcdcd;
+    --color-dark-bg: #111411;
+    --color-dark-card: #1a1d1a;
+    --color-brand: #efff43;
+    --color-brand-dark: #d9e83d;
+    --color-brand-light: #f4ff6f;
 }
 
 @layer utilities {

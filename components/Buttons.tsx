@@ -7,7 +7,7 @@ export const PrimaryButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElemen
 );
 
 export const GhostButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, className, ...props }) => (
-    <button className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-white/10 bg-[#43B9AA]  hover:bg-white/6 backdrop-blur-sm active:scale-95 transition ${className}`} {...props} >
+    <button className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-secondary/20 bg-transparent text-[#111411] hover:bg-secondary/10 backdrop-blur-sm active:scale-95 transition ${className}`} {...props} >
         {children}
     </button>
 );

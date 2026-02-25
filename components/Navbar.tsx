@@ -48,7 +48,9 @@ export default function Navbar() {
                         <Globe className='size-4' />
                         {language === 'he' ? 'EN' : 'עברית'}
                     </motion.button>
-                    <PrimaryButton className='max-sm:text-xs hidden sm:inline-block'>{t.getStarted}</PrimaryButton>
+                    <a href='/#CTA'>
+                        <PrimaryButton className='max-sm:text-xs hidden sm:inline-block text-dark-bg'>{t.getStarted}</PrimaryButton>
+                    </a>
                 </div>
 
                 <button onClick={() => setIsOpen(!isOpen)} className='md:hidden'>
@@ -74,7 +76,9 @@ export default function Navbar() {
                     {language === 'he' ? 'EN' : 'עברית'}
                 </motion.button>
 
-                <PrimaryButton onClick={() => setIsOpen(false)}>{t.getStarted}</PrimaryButton>
+                <a href='/#CTA' onClick={() => setIsOpen(false)}>
+                    <PrimaryButton className='text-dark-bg'>{t.getStarted}</PrimaryButton>
+                </a>
 
                 <button
                     onClick={() => setIsOpen(false)}

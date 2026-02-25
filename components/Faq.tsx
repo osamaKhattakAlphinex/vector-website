@@ -14,7 +14,7 @@ export default function Faq() {
         <section id="faq" className="relative py-20 2xl:py-32 overflow-hidden">
             {/* Animated Background Orbs */}
             <motion.div
-                className="absolute top-20 left-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"
+                className="absolute top-20 left-10 w-80 h-80 bg-brand/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, 60, 0],
                     x: [0, 40, 0],
@@ -27,7 +27,7 @@ export default function Faq() {
             />
 
             <motion.div
-                className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"
+                className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, -60, 0],
                     x: [0, -40, 0],
@@ -41,7 +41,7 @@ export default function Faq() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-purple-400/20"
+                className="absolute top-1/4 right-1/4 w-16 h-16 border-2 border-brand/20"
                 animate={{
                     y: [0, -70, 0],
                     rotate: [0, -180, -360],
@@ -55,7 +55,7 @@ export default function Faq() {
             />
 
             <motion.div
-                className="absolute bottom-1/4 left-1/3 w-14 h-14 border-2 border-cyan-400/20 rounded-full"
+                className="absolute bottom-1/4 left-1/3 w-14 h-14 border-2 border-secondary/20 rounded-full"
                 animate={{
                     y: [0, -80, 0],
                     scale: [1, 1.4, 1],
@@ -71,7 +71,7 @@ export default function Faq() {
 
             {/* Question marks */}
             <motion.div
-                className="absolute top-1/3 left-1/4 text-purple-400/20 text-4xl font-light"
+                className="absolute top-1/3 left-1/4 text-brand/20 text-4xl font-light"
                 animate={{
                     y: [0, -60, 0],
                     rotate: [0, 15, -15, 0],
@@ -87,7 +87,7 @@ export default function Faq() {
             </motion.div>
 
             <motion.div
-                className="absolute bottom-1/3 right-1/4 text-cyan-400/20 text-3xl font-light"
+                className="absolute bottom-1/3 right-1/4 text-secondary/20 text-3xl font-light"
                 animate={{
                     y: [0, -65, 0],
                     rotate: [0, -15, 15, 0],

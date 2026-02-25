@@ -15,7 +15,7 @@ export default function Pricing() {
         <section id="pricing" className="relative py-20 bg-white/3 border-t border-white/6 overflow-hidden">
             {/* Animated Background Orbs */}
             <motion.div
-                className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+                className="absolute top-0 right-0 w-96 h-96 bg-brand/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, 50, 0],
                     x: [0, -30, 0],
@@ -28,7 +28,7 @@ export default function Pricing() {
             />
 
             <motion.div
-                className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+                className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, -50, 0],
                     x: [0, 30, 0],
@@ -42,7 +42,7 @@ export default function Pricing() {
 
             {/* Geometric shapes */}
             <motion.div
-                className="absolute top-1/3 left-1/4 w-14 h-14 border-2 border-indigo-400/20 rounded-lg"
+                className="absolute top-1/3 left-1/4 w-14 h-14 border-2 border-brand/20 rounded-lg"
                 animate={{
                     y: [0, -70, 0],
                     rotate: [0, 180, 360],
@@ -56,7 +56,7 @@ export default function Pricing() {
             />
 
             <motion.div
-                className="absolute bottom-1/3 right-1/4 w-16 h-16 border-2 border-cyan-400/20"
+                className="absolute bottom-1/3 right-1/4 w-16 h-16 border-2 border-secondary/20"
                 animate={{
                     y: [0, -80, 0],
                     rotate: [0, -180, -360],
@@ -72,7 +72,7 @@ export default function Pricing() {
 
             {/* Plus signs */}
             <motion.div
-                className="absolute top-1/4 right-1/3 text-indigo-400/20 text-3xl font-light"
+                className="absolute top-1/4 right-1/3 text-brand/20 text-3xl font-light"
                 animate={{
                     y: [0, -60, 0],
                     rotate: [0, 90, 0],
@@ -88,7 +88,7 @@ export default function Pricing() {
             </motion.div>
 
             <motion.div
-                className="absolute bottom-1/4 left-1/3 text-cyan-400/20 text-4xl font-light"
+                className="absolute bottom-1/4 left-1/3 text-secondary/20 text-4xl font-light"
                 animate={{
                     y: [0, -70, 0],
                     rotate: [0, -90, 0],
@@ -131,19 +131,19 @@ export default function Pricing() {
                                 }
                             }}
                             className={`group relative p-6 rounded-xl border backdrop-blur overflow-hidden ${plan.popular
-                                ? 'border-indigo-500/50 bg-indigo-900/30'
-                                : 'border-white/8 bg-indigo-950/30'
+                                ? 'border-brand/50 bg-brand/5'
+                                : 'border-secondary/10 bg-dark-card/50'
                                 }`}
                             whileHover={{ y: -5 }}
                         >
                             {/* Glow effect */}
                             <motion.div
-                                className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 to-cyan-500/0 group-hover:from-indigo-500/10 group-hover:to-cyan-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                className="absolute inset-0 bg-linear-to-br from-brand/0 to-secondary/0 group-hover:from-brand/5 group-hover:to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             />
 
                             {plan.popular && (
                                 <motion.p
-                                    className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 rounded-md text-xs font-semibold"
+                                    className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#EFFF43] !text-gray-950 rounded-md text-xs font-semibold"
                                     animate={{
                                         y: [0, -5, 0],
                                     }}
@@ -175,7 +175,7 @@ export default function Pricing() {
                                         key={i}
                                         className="flex items-center gap-3 text-sm text-gray-300"
                                     >
-                                        <Check className="w-4 h-4 text-indigo-400" />
+                                        <Check className="w-4 h-4 text-brand" />
                                         {feat}
                                     </li>
                                 ))}
@@ -183,11 +183,11 @@ export default function Pricing() {
 
                             <div className="relative z-10">
                                 {plan.popular ? (
-                                    <PrimaryButton className="w-full">
+                                    <PrimaryButton className="w-full text-black">
                                         {t.getStartedBtn}
                                     </PrimaryButton>
                                 ) : (
-                                    <GhostButton className="w-full justify-center">
+                                    <GhostButton className="w-full justify-center text-[#EFFF43]">
                                         {t.getStartedBtn}
                                     </GhostButton>
                                 )}

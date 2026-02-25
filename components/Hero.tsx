@@ -1,5 +1,4 @@
 'use client';
-import { Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -55,16 +54,8 @@ const TypingAnimation = ({ phrases }: { phrases: string[] }) => {
 };
 
 export default function Hero() {
-    const [email, setEmail] = useState('');
-    const [isSubmitted, setIsSubmitted] = useState(false);
     const { language, isRTL } = useLanguage();
     const t = translations[language];
-
-    const trustedUserImages = [
-        'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50',
-        'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=50',
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
-    ];
 
     const trustedLogos = [
         { name: '35mm Boge', url: '/assets/clients/35mm-boge.png' },
@@ -114,11 +105,11 @@ export default function Hero() {
                 />
 
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-dark-bg/70" />
 
                 {/* Animated gradient overlay */}
                 <motion.div
-                    className="absolute inset-0 bg-linear-to-br from-indigo-900/30 via-transparent to-cyan-900/30"
+                    className="absolute inset-0 bg-linear-to-br from-brand/10 via-transparent to-secondary/5"
                     animate={{
                         backgroundPosition: ['0% 0%', '100% 100%'],
                     }}
@@ -131,7 +122,7 @@ export default function Hero() {
 
                 {/* Floating orbs animation */}
                 <motion.div
-                    className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl"
+                    className="absolute top-20 left-10 w-72 h-72 bg-brand/15 rounded-full blur-3xl"
                     animate={{
                         y: [0, 50, 0],
                         x: [0, 30, 0],
@@ -144,7 +135,7 @@ export default function Hero() {
                 />
 
                 <motion.div
-                    className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+                    className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"
                     animate={{
                         y: [0, -50, 0],
                         x: [0, -30, 0],
@@ -200,7 +191,7 @@ export default function Hero() {
                             </motion.h1>
 
                             <motion.p
-                                className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
+                                className="text-base md:text-lg text-secondary/90 max-w-2xl mx-auto leading-relaxed"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -224,7 +215,7 @@ export default function Hero() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         required
-                                        className={`w-full py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-400 focus:bg-white/15 transition-all ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'}`}
+                                        className={`w-full py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-brand focus:bg-white/15 transition-all ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'}`}
                                     />
                                 </div>
                                 <motion.button
@@ -238,7 +229,7 @@ export default function Hero() {
                             </motion.form> */}
                             <motion.a
                                 href='#CTA'
-                                className="px-6 py-3 rounded-lg bg-brand text-white font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all whitespace-nowrap my-6"
+                                className="px-6 py-3 rounded-lg bg-brand text-[#111411] font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all whitespace-nowrap my-6"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -260,7 +251,7 @@ export default function Hero() {
                                     >
                                         20+
                                     </motion.div>
-                                    <p className="text-xs md:text-sm text-gray-400">{t.projectsCompleted}</p>
+                                    <p className="text-xs md:text-sm text-secondary/80">{t.projectsCompleted}</p>
                                 </div>
                                 <div>
                                     <motion.div
@@ -270,7 +261,7 @@ export default function Hero() {
                                     >
                                         50+
                                     </motion.div>
-                                    <p className="text-xs md:text-sm text-gray-400">{t.happyClients}</p>
+                                    <p className="text-xs md:text-sm text-secondary/80">{t.happyClients}</p>
                                 </div>
                                 <div>
                                     <motion.div
@@ -280,7 +271,7 @@ export default function Hero() {
                                     >
                                         5+
                                     </motion.div>
-                                    <p className="text-xs md:text-sm text-gray-400">{t.yearsExperience}</p>
+                                    <p className="text-xs md:text-sm text-secondary/80">{t.yearsExperience}</p>
                                 </div>
                             </motion.div>
                         </motion.div>
@@ -290,7 +281,7 @@ export default function Hero() {
 
             {/* LOGO MARQUEE */}
             <motion.section
-                className="border-y border-white/6 bg-white/1"
+                className="border-y border-secondary/10 bg-dark-card"
                 initial={{ y: 60, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
