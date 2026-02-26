@@ -25,7 +25,6 @@ export const translations = {
     ],
 
     // Features
-    services: "שירותים",
     servicesHeading: "פתרונות עיצוב אסטרטגיים",
     servicesDescription:
       "פתרונות עיצוב אסטרטגיים שנועדו להצמיח את העסק שלכם ולייצר אימפקט ויזואלי חזק.",
@@ -74,7 +73,6 @@ export const translations = {
     ],
 
     // Pricing
-    pricing: "תמחור",
     simplePricing: "תמחור פשוט וקריד",
     pricingDesc:
       "חבילות סוכנות גמישות שתוכננו להתאים לסטארטאפים, צוותים גדלים ומותגים מבוססים.",
@@ -192,7 +190,6 @@ export const translations = {
     ],
 
     // Features
-    services: "Services",
     servicesHeading: "Strategic design solutions",
     servicesDescription:
       "Strategic design solutions designed to grow your business and create a strong visual impact.",
@@ -241,7 +238,6 @@ export const translations = {
     ],
 
     // Pricing
-    pricing: "Pricing",
     simplePricing: "Simple, transparent pricing",
     pricingDesc:
       "Flexible agency packages designed to fit startups, growing teams and established brands.",
