@@ -234,7 +234,7 @@ export default function Hero() {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Get Started
+                                {t.getStarted}
                             </motion.a>
 
                             {/* Stats */}
@@ -250,9 +250,9 @@ export default function Hero() {
                                         animate={{ y: [0, -5, 0] }}
                                         transition={{ duration: 2, repeat: Infinity }}
                                     >
-                                        20+
+                                        {t.statsYears}
                                     </motion.div>
-                                    <p className="text-xs md:text-sm text-secondary/80">{t.projectsCompleted}</p>
+                                    <p className="text-xs md:text-sm text-secondary/80">{t.yearsExperience}</p>
                                 </div>
                                 <div>
                                     <motion.div
@@ -260,7 +260,7 @@ export default function Hero() {
                                         animate={{ y: [0, -5, 0] }}
                                         transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
                                     >
-                                        50+
+                                        {t.statsClients}
                                     </motion.div>
                                     <p className="text-xs md:text-sm text-secondary/80">{t.happyClients}</p>
                                 </div>
@@ -270,9 +270,9 @@ export default function Hero() {
                                         animate={{ y: [0, -5, 0] }}
                                         transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
                                     >
-                                        5+
+                                        {t.statsProjects}
                                     </motion.div>
-                                    <p className="text-xs md:text-sm text-secondary/80">{t.yearsExperience}</p>
+                                    <p className="text-xs md:text-sm text-secondary/80">{t.projectsCompleted}</p>
                                 </div>
                             </motion.div>
                         </motion.div>

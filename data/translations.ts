@@ -17,6 +17,9 @@ export const translations = {
     projectsCompleted: "פרויקטים שהושלמו",
     happyClients: "לקוחות מרוצים",
     yearsExperience: "שנות ניסיון",
+    statsYears: "12+",
+    statsClients: "200+",
+    statsProjects: "1000+",
     typingPhrases: [
       "מותג בלתי נשכח",
       "זהות ויזואלית חזקה",
@@ -149,6 +152,13 @@ export const translations = {
     ctaDescription:
       "השאירו פרטים קצרים ונחזור אליכם לשיחת אפיון ללא עלות וללא התחייבות.",
     startProject: "השאירו פרטים",
+    formSuccess: "תודה! נחזור אליכם בהקדם",
+    formError: "שגיאה בשליחה. אנא נסו שוב.",
+    formNamePlaceholder: "שם מלא",
+    formEmailPlaceholder: "אימייל",
+    formPhonePlaceholder: "מספר טלפון",
+    formMessagePlaceholder: "ספרו לנו על הפרויקט שלכם...",
+    formCharacterCount: "תווים",
 
     // Footer
     footerDescription:
@@ -182,6 +192,9 @@ export const translations = {
     projectsCompleted: "Projects Done",
     happyClients: "Happy Clients",
     yearsExperience: "Years of Experience",
+    statsYears: "12+",
+    statsClients: "200+",
+    statsProjects: "1000+",
     typingPhrases: [
       "unforgettable brand",
       "strong visual identity",
@@ -314,6 +327,13 @@ export const translations = {
     ctaDescription:
       "Leave your details and we'll get back to you for a free consultation with no commitment.",
     startProject: "Learn More",
+    formSuccess: "Thank you! We'll get back to you soon",
+    formError: "Error sending. Please try again.",
+    formNamePlaceholder: "Full Name",
+    formEmailPlaceholder: "Email",
+    formPhonePlaceholder: "Phone Number",
+    formMessagePlaceholder: "Tell us about your project...",
+    formCharacterCount: "characters",
 
     // Footer
     footerDescription:

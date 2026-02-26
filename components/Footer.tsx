@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10">
                     <div>
-                        <img src='/vector-graphics.png' alt="logo" className="w-14" />
+                        <img src='/vector-graphics.png' alt="logo" className="w-24" />
                     </div>
 
                     <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">

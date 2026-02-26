@@ -85,16 +85,40 @@ export default function CTA() {
 
         setIsLoading(true);
 
-        // Simulate API call
-        setTimeout(() => {
-            setIsSubmitted(true);
-            setFormData({ name: '', email: '', phone: '', description: '' });
-            setErrors({});
-            setIsLoading(false);
+        try {
+            const formDataToSend = new FormData();
+            formDataToSend.append("access_key", "04626218-e0d4-493f-8769-61524bcbf2ca");
+            formDataToSend.append("name", formData.name);
+            formDataToSend.append("email", formData.email);
+            formDataToSend.append("phone", formData.phone);
+            formDataToSend.append("message", formData.description);
+            formDataToSend.append("subject", `New Contact Form Submission from ${formData.name}`);
+            formDataToSend.append("from_name", "Vector Graphics Website");
 
-            // Hide success message after 3 seconds
-            setTimeout(() => setIsSubmitted(false), 3000);
-        }, 1000);
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formDataToSend
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setIsSubmitted(true);
+                setFormData({ name: '', email: '', phone: '', description: '' });
+                setErrors({});
+
+                // Hide success message after 5 seconds
+                setTimeout(() => setIsSubmitted(false), 5000);
+            } else {
+                // Show error message
+                alert(data.message || 'Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Failed to send message. Please try again.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const getInputClass = (fieldName: string) => {
@@ -215,7 +239,7 @@ export default function CTA() {
                                 <input
                                     type="text"
                                     name="name"
-                                    placeholder="Your Name"
+                                    placeholder={t.formNamePlaceholder}
                                     value={formData.name}
                                     onChange={handleChange}
                                     className={getInputClass('name')}
@@ -238,7 +262,7 @@ export default function CTA() {
                                 <input
                                     type="email"
                                     name="email"
-                                    placeholder="Your Email"
+                                    placeholder={t.formEmailPlaceholder}
                                     value={formData.email}
                                     onChange={handleChange}
                                     className={getInputClass('email')}
@@ -261,7 +285,7 @@ export default function CTA() {
                                 <input
                                     type="tel"
                                     name="phone"
-                                    placeholder="Your Phone Number"
+                                    placeholder={t.formPhonePlaceholder}
                                     value={formData.phone}
                                     onChange={handleChange}
                                     className={getInputClass('phone')}
@@ -283,7 +307,7 @@ export default function CTA() {
                                 <MessageSquare className={`absolute top-4 size-5 pointer-events-none ${errors.description ? 'text-red-400' : 'text-gray-400'} ${isRTL ? 'right-4' : 'left-4'}`} />
                                 <textarea
                                     name="description"
-                                    placeholder="Tell us about your project..."
+                                    placeholder={t.formMessagePlaceholder}
                                     value={formData.description}
                                     onChange={handleChange}
                                     rows={4}
@@ -300,7 +324,7 @@ export default function CTA() {
                                     </motion.div>
                                 )}
                                 <div className="text-xs text-gray-400 mt-1">
-                                    {formData.description.length}/500 characters
+                                    {formData.description.length}/500 {t.formCharacterCount}
                                 </div>
                             </div>
 
@@ -308,14 +332,14 @@ export default function CTA() {
                             <motion.button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full px-8 py-3 rounded-lg bg-brand text-black font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full px-8 py-3 rounded-lg bg-brand text-dark-bg font-semibold hover:shadow-lg hover:shadow-brand/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                                 whileHover={{ scale: isLoading ? 1 : 1.02 }}
                                 whileTap={{ scale: isLoading ? 1 : 0.98 }}
                             >
                                 {isLoading ? (
                                     <>
                                         <motion.div
-                                            className="size-4 border-2 border-white/30 border-t-white rounded-full"
+                                            className="size-4 border-2 border-dark-bg/30 border-t-dark-bg rounded-full"
                                             animate={{ rotate: 360 }}
                                             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                                         />
@@ -323,11 +347,22 @@ export default function CTA() {
                                     </>
                                 ) : (
                                     <>
-                                        {isSubmitted ? 'Message Sent!' : t.startProject}
+                                        {isSubmitted ? t.formSuccess : t.startProject}
                                         {!isSubmitted && <ArrowRightIcon size={20} />}
                                     </>
                                 )}
                             </motion.button>
+
+                            {/* Success Message */}
+                            {isSubmitted && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="text-center text-brand text-sm font-medium"
+                                >
+                                    ✓ {t.formSuccess}
+                                </motion.div>
+                            )}
                         </motion.form>
                     </div>
                 </div>
