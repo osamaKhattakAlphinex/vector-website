@@ -27,9 +27,8 @@ export default function Footer() {
         {
             title: t.footerConnect,
             links: [
-                { name: "Twitter", url: "#" },
-                { name: "LinkedIn", url: "#" },
-                { name: "GitHub", url: "#" }
+                { name: "Instagram", url: "#" },
+                { name: "WhatsApp", url: "#" }
             ]
         }
     ];
@@ -42,12 +41,9 @@ export default function Footer() {
             transition={{ type: "spring", duration: 0.5 }}
         >
             <div className="max-w-6xl mx-auto px-6">
-                <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-white/10">
+                <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10">
                     <div>
                         <img src='/vector-graphics.png' alt="logo" className="w-14" />
-                        <p className="max-w-[410px] mt-6 text-sm leading-relaxed">
-                            {t.footerDescription}
-                        </p>
                     </div>
 
                     <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">
@@ -76,9 +72,7 @@ export default function Footer() {
                 </div>
 
                 <p className="py-4 text-center text-sm text-gray-400">
-                    © {new Date().getFullYear()}{' '}
-
-                    | {t.footerRights}
+                    © {new Date().getFullYear()} | {t.footerRights}
                 </p>
             </div>
         </motion.footer>

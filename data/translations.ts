@@ -1,49 +1,49 @@
 export const translations = {
   he: {
     // Navbar
-    home: "בית",
+    home: "דף הבית",
     services: "שירותים",
-    portfolio: "תיקייה",
+    portfolio: "עבודות קודמות",
     pricing: "תמחור",
     contact: "צור קשר",
 
     // Hero
-    heroTitle: "אנחנו עוצבים ובונים",
-    heroHighlight: "חוויות דיגיטליות בעלות השפעה",
+    heroTitle: "הופכים חזון ל",
+    heroHighlight: "מותג בלתי נשכח",
     heroDescription:
-      "סוכנות דיגיטלית יצירתית המסייעת לעסקים להתפתח באמצעות עיצוב מחשבתי, פיתוח מדרגי ואסטרטגיה מונעת ביצועים.",
-    getStarted: "התחל עכשיו",
+      "סטודיו לעיצוב גרפי שבו אסטרטגיה עסקית פוגשת אסתטיקה מדויקת. אנחנו לא רק מעצבים יפה – אנחנו בונים כלים ויזואליים שמניעים צמיחה.",
+    getStarted: "השאירו פרטים",
     trustedBy: "מהימן על ידי מותגים ומייסדים ברחבי העולם",
-    projectsCompleted: "פרויקטים הושלמו",
-    happyClients: "לקוחות שמחים",
+    projectsCompleted: "פרויקטים שהושלמו",
+    happyClients: "לקוחות מרוצים",
     yearsExperience: "שנות ניסיון",
     typingPhrases: [
-      "חוויות דיגיטליות בעלות השפעה",
-      "פתרונות אינטרנט מרהיבים",
-      "מוצרים דיגיטליים חדשניים",
-      "ממשקי משתמש מרתקים",
-      "אפליקציות מדרגיות",
+      "מותג בלתי נשכח",
+      "זהות ויזואלית חזקה",
+      "עיצוב שמניע צמיחה",
+      "חוויה ויזואלית מנצחת",
     ],
 
     // Features
-    servicesHeading: "כל מה שהמותג שלך צריך כדי לגדול",
+    services: "שירותים",
+    servicesHeading: "פתרונות עיצוב אסטרטגיים",
     servicesDescription:
-      "מאסטרטגיה ועד ביצוע, אנחנו עוזרים לעסקים לבנות מוצרים דיגיטליים חזקים וחוויות לקוח משמעותיות.",
-    discovery: "גילוי ותכנון",
+      "פתרונות עיצוב אסטרטגיים שנועדו להצמיח את העסק שלכם ולייצר אימפקט ויזואלי חזק.",
+    discovery: "בניית שפה גרפית מאפס",
     discoveryDesc:
-      "אנחנו מבינים את היעדים, הקהל והאתגרים שלך כדי לעצב אסטרטגיה ברורה וניתנת לביצוע.",
-    design: "עיצוב ופיתוח",
+      "לוגו, פלטת צבעים, פונטים וספר מותג שיוצרים זהות אחידה וחזקה",
+    design: "עיצוב לדיגיטל וסושיאל",
     designDesc:
-      "עיצוב באיכות גבוהה ופיתוח מדרגי המתמקדים בביצועים וקלות שימוש.",
-    launch: "השקה וגדילה",
+      "באנרים, פוסטים לרשתות חברתיות, דפי נחיתה ומצגות עסקיות שמושכים את העין.",
+    launch: "עיצוב לדפוס",
     launchDesc:
-      "אנחנו משיקים, משפרים ומשתפרים ברציפות כדי להניע גדילה עסקית מדידה.",
+      "כרטיסי ביקור, פולדרים, קטלוגים ואריזות מוצר – כי המגע הפיזי עדיין קובע.",
 
     // Portfolio
-    ourWork: "עבודתנו",
+    ourWork: "עבודות שמדברות בעד עצמן",
     previousWorks: "עבודות קודמות",
     previousWorksDesc:
-      "חקור את הפרויקטים האחרונים שלנו וראה כיצד עזרנו למותגים להפוך את נוכחותם הדיגיטלית באמצעות עיצוב וקוד חדשניים.",
+      "מבט אל הפרויקטים שהפכו חזון עסקי למציאות ויזואלית מנצחת.",
     viewProject: "צפה בפרויקט",
     viewAllProjects: "צפה בכל הפרויקטים",
     portfolioItems: [
@@ -74,7 +74,8 @@ export const translations = {
     ],
 
     // Pricing
-    simplePricing: "תמחור פשוט וקריא",
+    pricing: "תמחור",
+    simplePricing: "תמחור פשוט וקריד",
     pricingDesc:
       "חבילות סוכנות גמישות שתוכננו להתאים לסטארטאפים, צוותים גדלים ומותגים מבוססים.",
     mostPopular: "הפופולרי ביותר",
@@ -139,82 +140,77 @@ export const translations = {
           "אנחנו עובדים עם סטארטאפים, עסקים גדלים ומותגים מבוססים. התהליך שלנו גמיש ומותאם ליעדים ולקנה המידה שלך.",
       },
       {
-        question: "כמה זמן לוקח פרויקט טיפוסי?",
+        question: "כמה זמן לוקח לכם ליצור גרפיקות?",
         answer:
-          "לוחות זמנים משתנים לפי היקף, אבל רוב הפרויקטים נמשכים בין 2-6 שבועות. אנחנו מספקים לוח זמנים ברור לאחר שלב הגילוי.",
-      },
-      {
-        question: "האם אתם מציעים תמיכה שוטפת לאחר ההשקה?",
-        answer:
-          "כן. אנחנו מציעים חבילות תחזוקה, אופטימיזציה ותמיכה בצמיחה כדי להבטיח שהמוצר שלך ימשיך להתפקד ולהתפתח.",
+          "בוקטור אנחנו עובדים מהר כדי שתישארו רלוונטיים. זמן האספקה המקסימלי הוא 72 שעות, אבל ברוב המקרים אנחנו מספקים את התוצרים הרבה לפני.",
       },
     ],
 
     // CTA
-    readyToGrow: "מוכן לגדול את המותג שלך?",
+    readyToGrow: "בואו נזניק את העסק שלך לרמה הבאה",
     ctaDescription:
-      "שתף פעולה עם הסוכנות שלנו כדי לעצב, לבנות ולהרחיב מוצרים דיגיטליים המספקים תוצאות עסקיות אמיתיות.",
-    startProject: "התחל את הפרויקט שלך",
+      "השאירו פרטים קצרים ונחזור אליכם לשיחת אפיון ללא עלות וללא התחייבות.",
+    startProject: "השאירו פרטים",
 
     // Footer
     footerDescription:
       "אנחנו סוכנות דיגיטלית המתמקדת באסטרטגיה, עיצוב ופיתוח — מסייעת למותגים לבנות חוויות דיגיטליות משמעותיות ולצמוח בצורה בת קיימא.",
-    footerCompany: "חברה",
+    footerCompany: "קישורים",
     footerLegal: "משפטי",
     footerConnect: "התחבר",
-    footerHome: "בית",
+    footerHome: "דף הבית",
     footerServices: "שירותים",
-    footerWork: "עבודות",
+    footerWork: "עבודות קודמות",
     footerContact: "צור קשר",
     footerPrivacy: "מדיניות פרטיות",
-    footerTerms: "תנאי שירות",
+    footerTerms: "תנאי שימוש",
     footerRights: "כל הזכויות שמורות.",
   },
   en: {
     // Navbar
     home: "Home",
     services: "Services",
-    portfolio: "Portfolio",
+    portfolio: "Our work",
     pricing: "Pricing",
     contact: "Contact",
 
     // Hero
-    heroTitle: "We design & build",
-    heroHighlight: "high-impact digital experiences",
+    heroTitle: "Turning vision into an",
+    heroHighlight: "unforgettable brand",
     heroDescription:
-      "A creative digital agency helping startups and businesses grow through thoughtful design, scalable development and performance-driven strategy.",
-    getStarted: "Get Started",
+      "A graphic design studio where business strategy meets precise aesthetics. We don't just design beautifully – we build visual tools that drive growth.",
+    getStarted: "Learn More",
     trustedBy: "Trusted by brands & founders worldwide",
-    projectsCompleted: "Projects Completed",
+    projectsCompleted: "Projects Done",
     happyClients: "Happy Clients",
-    yearsExperience: "Years Experience",
+    yearsExperience: "Years of Experience",
     typingPhrases: [
-      "high-impact digital experiences",
-      "stunning web solutions",
-      "innovative digital products",
-      "engaging user interfaces",
-      "scalable applications",
+      "unforgettable brand",
+      "strong visual identity",
+      "design that drives growth",
+      "winning visual experience",
     ],
 
     // Features
-    servicesHeading: "Everything your brand needs to grow",
+    services: "Services",
+    servicesHeading: "Strategic design solutions",
     servicesDescription:
-      "From strategy to execution, we help businesses build strong digital products and meaningful customer experiences.",
-    discovery: "Discovery & Planning",
+      "Strategic design solutions designed to grow your business and create a strong visual impact.",
+    discovery: "Branding & Visual Identity",
     discoveryDesc:
-      "We understand your goals, audience and challenges to craft a clear, actionable strategy.",
-    design: "Design & Development",
+      "Crafting a visual language from the ground up – logo, color palette, fonts, and brand book that create a unified and strong identity",
+    design: "Digital & Social Media Design",
     designDesc:
-      "High-quality design and scalable development focused on performance and usability.",
-    launch: "Launch & Growth",
+      "Eye-catching banners, social media assets, landing pages, and business presentations designed to cut through the noise and capture attention.",
+    launch: "Print Design",
     launchDesc:
-      "We launch, optimize and continuously improve to drive measurable business growth.",
+      "Business cards, brochures, catalogs, and product packaging – because physical touch still matters.",
 
     // Portfolio
-    ourWork: "Our Work",
+    ourWork: "Our work. Your impact.",
     previousWorks: "Previous Works",
     previousWorksDesc:
-      "Explore our latest projects and see how we've helped brands transform their digital presence through innovative design and development.",
+      "A look at the projects that turned business vision into winning visual reality.",
     viewProject: "View Project",
     viewAllProjects: "View All Projects",
     portfolioItems: [
@@ -245,6 +241,7 @@ export const translations = {
     ],
 
     // Pricing
+    pricing: "Pricing",
     simplePricing: "Simple, transparent pricing",
     pricingDesc:
       "Flexible agency packages designed to fit startups, growing teams and established brands.",
@@ -310,36 +307,30 @@ export const translations = {
           "We work with startups, growing businesses and established brands. Our process is flexible and tailored to match your goals and scale.",
       },
       {
-        question: "How long does a typical project take?",
+        question: "How much time does it take you to create a social post?",
         answer:
-          "Project timelines vary by scope, but most projects take between 2–6 weeks. We provide a clear timeline after the discovery phase.",
-      },
-      {
-        question: "Do you offer ongoing support after launch?",
-        answer:
-          "Yes. We offer maintenance, optimization and growth support packages to ensure your product continues to perform and evolve.",
+          "We move fast to keep you relevant. Our maximum turnaround is 72 hours, though we typically deliver our designs much sooner.",
       },
     ],
 
     // CTA
-    readyToGrow: "Ready to grow your brand?",
+    readyToGrow: "Let's take your business to the next level",
     ctaDescription:
-      "Partner with our agency to design, build and scale digital products that deliver real business results.",
-    startProject: "Start your project",
+      "Leave your details and we'll get back to you for a free consultation with no commitment.",
+    startProject: "Learn More",
 
     // Footer
     footerDescription:
       "We are a digital agency focused on strategy, design and development—helping brands build meaningful digital experiences and grow sustainably.",
-    footerCompany: "Company",
+    footerCompany: "Links",
     footerLegal: "Legal",
     footerConnect: "Connect",
     footerHome: "Home",
     footerServices: "Services",
-    footerWork: "Work",
+    footerWork: "Our work",
     footerContact: "Contact",
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Service",
     footerRights: "All rights reserved.",
   },
 };
-
