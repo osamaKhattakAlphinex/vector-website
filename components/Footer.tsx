@@ -27,8 +27,8 @@ export default function Footer() {
         {
             title: t.footerConnect,
             links: [
-                { name: "Instagram", url: "#" },
-                { name: "WhatsApp", url: "#" }
+                { name: "Instagram", url: "https://www.instagram.com/artisheartnyc?igsh=MWQ4bDIza3hmdjFlNA%3D%3D&utm_source=qr" },
+                { name: "WhatsApp", url: "https://wa.me/972542118144" }
             ]
         }
     ];
