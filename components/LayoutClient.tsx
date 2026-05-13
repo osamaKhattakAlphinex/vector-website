@@ -7,7 +7,7 @@ export default function LayoutClient({ children }: { children: React.ReactNode }
     return (
         <LanguageProvider>
             <RTLWrapper />
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
         </LanguageProvider>
     );
