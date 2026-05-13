@@ -63,10 +63,10 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <LayoutClient>
-                    <SoftBackdrop />
-                    <LenisScroll />
+                    {/* <SoftBackdrop /> */}
+                    {/* <LenisScroll /> */}
                     {children}
-                    <Footer />
+                    {/* <Footer /> */}
                 </LayoutClient>
             </body>
         </html>
